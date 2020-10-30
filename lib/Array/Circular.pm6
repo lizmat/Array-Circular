@@ -1,16 +1,6 @@
 use v6.c;
 
-# Since we cannot export a proto sub trait_mod:<is> with "is export", we
-# need to do this manually with an EXPORT sub.  So we create a hash here
-# to be set in compilation of the mainline and then return that in the
-# EXPORT sub.
-my %EXPORT;
-
-# Save the original trait_mod:<is> candidates, so we can pass on through
-# all of the trait_mod:<is>'s that cannot be handled here.
-BEGIN my $original_trait_mod_is = &trait_mod:<is>;
-
-module Array::Circular:ver<0.0.1>:auth<cpan:ELIZABETH> {
+module Array::Circular:ver<0.0.2>:auth<cpan:ELIZABETH> {
 
     role circular[\size] {
         method append(|) {
@@ -31,23 +21,14 @@ module Array::Circular:ver<0.0.1>:auth<cpan:ELIZABETH> {
         }
     }
 
-    # Manually mark this proto for export
-    %EXPORT<&trait_mod:<is>> := proto sub trait_mod:<is>(|) {*}
-
-    # Handle the "is restricted" / is restricted(Bool:D) cases
-    multi sub trait_mod:<is>(Variable:D \v, :$circular!) {
+    multi sub trait_mod:<is>(Variable:D \v, :$circular!) is export {
         if $circular.Int -> \size {
             my $name = v.var.name;
             trait_mod:<does>(v, circular[size]);
             v.var.WHAT.^set_name("$name\[{size},circular]");
         }
     }
-
-    # Make sure we handle all of the standard traits correctly
-    multi sub trait_mod:<is>(|c) { $original_trait_mod_is(|c) }
 }
-
-sub EXPORT { %EXPORT }
 
 =begin pod
 
@@ -79,7 +60,7 @@ Comments and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2020 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
