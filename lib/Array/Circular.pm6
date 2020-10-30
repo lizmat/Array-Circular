@@ -19,7 +19,7 @@ module Array::Circular:ver<0.0.1>:auth<cpan:ELIZABETH> {
         }
         method prepend(|) {
             callsame;
-            self.shift until self.elems <= size;
+            self.pop until self.elems <= size;
         }
         method push(|) {
             callsame;
