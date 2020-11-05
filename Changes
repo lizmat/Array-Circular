@@ -4,7 +4,7 @@ Revision history for Array-Circular
 
 0.0.2  2020-10-30T13:28:09+01:00
     - Fix calls to prepend, José Joaquín Atria++
-    - add GitHub workflows testing
+    - Add GitHub workflows testing
     - Simplify exporting: we just need to export an additional candidate!
     - Update copyright year
 
