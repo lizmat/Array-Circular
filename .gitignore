@@ -7,3 +7,4 @@
 .precomp/
 /releases/
 /Array-Circular-*
+/lib/Array/Agnostic.pm6

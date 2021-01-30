@@ -2,6 +2,10 @@ Revision history for Array-Circular
 
 {{$NEXT}}
 
+0.0.3  2021-01-30T13:20:32+01:00
+    - Make sure that methods only take instances
+    - Update copyright year
+
 0.0.2  2020-10-30T13:28:09+01:00
     - Fix calls to prepend, José Joaquín Atria++
     - Add GitHub workflows testing

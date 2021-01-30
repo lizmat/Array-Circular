@@ -13,7 +13,7 @@ SYNOPSIS
 DESCRIPTION
 ===========
 
-This module adds a `is circular` trait to `Arrays`. This limits the size of the array to the give number of elements, similar to shaped arrays. However, unlike shaped arrays, you **can** `push`, `append`, `unshift` and `prepend` to arrays with the `is circular` trait. Then, if the resulting size of the array is larger than the given size, elements will be removed "from the other end" until the array has the given size again.
+This module adds a `is circular` trait to `Arrays`. This limits the size of the array to the given number of elements, similar to shaped arrays. However, unlike shaped arrays, you **can** `push`, `append`, `unshift` and `prepend` to arrays with the `is circular` trait. Then, if the resulting size of the array is larger than the given size, elements will be removed "from the other end" until the array has the given size again.
 
 AUTHOR
 ======
@@ -25,7 +25,7 @@ Source can be located at: https://github.com/lizmat/Array-Circular . Comments an
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018-2020 Elizabeth Mattijsen
+Copyright 2018,2020,2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

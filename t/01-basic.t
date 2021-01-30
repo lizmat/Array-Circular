@@ -24,4 +24,4 @@ for (
     is @a, "666 43 44", "1 time $unshift";
 }
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4
