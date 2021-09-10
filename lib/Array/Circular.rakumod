@@ -1,6 +1,6 @@
-use v6.c;
+use v6.d;
 
-module Array::Circular:ver<0.0.3>:auth<cpan:ELIZABETH> {
+module Array::Circular:ver<0.0.4>:auth<zef:lizmat> {
 
     role circular[\size] {
         method append(::?ROLE:D: |) {
@@ -52,14 +52,14 @@ be removed "from the other end" until the array has the given size again.
 
 =head1 AUTHOR
 
-Elizabeth Mattijsen <liz@wenzperl.nl>
+Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Array-Circular .
 Comments and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018,2020,2021 Elizabeth Mattijsen
+Copyright 2018, 2020, 2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

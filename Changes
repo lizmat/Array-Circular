@@ -2,6 +2,11 @@ Revision history for Array-Circular
 
 {{$NEXT}}
 
+0.0.4  2021-09-10T10:34:20+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+
 0.0.3  2021-01-30T13:20:32+01:00
     - Make sure that methods only take instances
     - Update copyright year
