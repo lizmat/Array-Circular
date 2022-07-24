@@ -2,7 +2,7 @@ use Test;
 
 use Array::Circular;
 
-plan 10;
+plan 11;
 
 my @a is circular(3);
 
@@ -22,5 +22,7 @@ for (
     @a."$unshift"(666);
     is @a, "666 43 44", "1 time $unshift";
 }
+
+dies-ok { 'my @b is circular(my $)'.EVAL }, 'check for compile time constant';
 
 # vim: expandtab shiftwidth=4
