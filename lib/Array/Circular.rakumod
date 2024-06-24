@@ -38,9 +38,13 @@ Array::Circular - add "is circular" trait to Arrays
 
 =head1 SYNOPSIS
 
-  use Array::Circular;
+=begin code :lang<raku>
 
-  my @a is circular(3);  # limit to 3 elements
+use Array::Circular;
+
+my @a is circular(3);  # limit to 3 elements
+
+=end code
 
 =head1 DESCRIPTION
 
@@ -69,7 +73,7 @@ deal to me!
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018, 2020, 2021, 2022 Elizabeth Mattijsen
+Copyright 2018, 2020, 2021, 2022, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

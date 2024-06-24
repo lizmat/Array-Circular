@@ -2,6 +2,11 @@ Revision history for Array-Circular
 
 {{$NEXT}}
 
+0.0.6  2024-06-24T19:46:36+02:00
+    - Modernize test file extension
+    - Add sponsor button
+    - Update copyright year
+
 0.0.5  2022-07-24T12:10:01+02:00
     - Die when given a variable, rather than a constant
     - Add sponsor link
