@@ -2,9 +2,10 @@ use Test;
 
 use Array::Circular;
 
-plan 12;
+plan 13;
 
-my @a is circular(3);
+my $size = 3;
+my @a is circular({ $size });
 
 for (
     < prepend append >,
@@ -23,7 +24,12 @@ for (
     is @a, "666 43 44", "1 time $unshift";
 }
 
-dies-ok { 'my @b is circular(my $)'.EVAL }, 'check for compile time constant';
-dies-ok { 'my @b is circular("foo")'.EVAL }, 'check for invalid value';
+$size = 5;  # change size at runtime
+@a.push(42);
+is @a, "666 43 44 42", "1 time push after resize";
+@a.push(137);
+is @a, "666 43 44 42 137", "2nd 1 time push after resize";
+@a.push(256);
+is @a, "43 44 42 137 256", "3rd 1 time push after resize";
 
 # vim: expandtab shiftwidth=4
