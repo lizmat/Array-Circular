@@ -1,6 +1,8 @@
 Revision history for Array-Circular
 
 {{$NEXT}}
+
+0.0.7  2025-01-09T15:11:35+01:00
     - Allow a Callable to be specified as size, which
       allows run-time modification of size
     - Add CI badges for each OS
